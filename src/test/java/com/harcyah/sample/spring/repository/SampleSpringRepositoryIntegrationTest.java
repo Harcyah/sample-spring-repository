@@ -9,7 +9,7 @@ import java.util.List;
 import static com.harcyah.sample.spring.repository.Assertions.assertThat;
 
 @SpringBootTest
-public class SampleSpringRepositoryIntegrationTest {
+class SampleSpringRepositoryIntegrationTest {
 
     @Autowired
     private CommentRepository commentRepository;
@@ -18,13 +18,13 @@ public class SampleSpringRepositoryIntegrationTest {
     private PostRepository postRepository;
 
     @Test
-    public void testRepositoriesAreDefined() {
+    void testRepositoriesAreDefined() {
         assertThat(commentRepository.count()).isEqualTo(0L);
         assertThat(postRepository.count()).isEqualTo(0L);
     }
 
     @Test
-    public void testFindCommentDetails() {
+    void testFindCommentDetails() {
         Post post0 = new Post();
         post0.setAuthor("Author0");
         post0.setTitle("Title0");
