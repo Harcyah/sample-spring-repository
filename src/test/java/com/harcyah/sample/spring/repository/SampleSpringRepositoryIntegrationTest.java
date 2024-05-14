@@ -19,8 +19,8 @@ class SampleSpringRepositoryIntegrationTest {
 
     @Test
     void testRepositoriesAreDefined() {
-        assertThat(commentRepository.count()).isEqualTo(0L);
-        assertThat(postRepository.count()).isEqualTo(0L);
+        assertThat(commentRepository.count()).isZero();
+        assertThat(postRepository.count()).isZero();
     }
 
     @Test
